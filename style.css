@@ -12,6 +12,13 @@
     Text Domain: storefront
 */
 
+/* 
+Color references
+Coral                     #FF7F50
+Slaman                  #FA8072
+Bootstrap Dark     #292B2C
+*/
+
 body {
     background: url("assets/img/tile.jpg") top left repeat;
 }
