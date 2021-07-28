@@ -1,0 +1,17 @@
+/* 
+    Theme Name: eSpaza WooCommerce
+    Theme URI:
+    Description: eSpaza seamless shopping for local South African goods and services.
+    Author: Tertius Scheepers
+    Author URI: https://www.meliorateafrica.com
+    Template: storefront
+    Version: 1.0.0
+    license: GNU GENERAL PUBLIC LICENSE version 3 or later
+    License URI: https://www.gnu.org/licenses/gpl-3.0.html
+    Tags: woocommercse, Local goods, South Africa, responsive-layout
+    Text Domain: storefront
+*/
+
+body {
+    background: url("assets/img/tile.jpg") top left repeat;
+}
