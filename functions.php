@@ -21,6 +21,22 @@ function espaza_footer (){
 }
 add_action('init', 'espaza_footer',10);
 
+// rule of 100 mix functions
+function espaza_display_savings_with_rule($price, $product){
+    if($product->get_sale_price() ):
+        $regular_price = $product->get_regular_price();
+
+        if($regular_price > 100) {
+            $saved = wc_price($product->get_regular_price() - $product->get_sale_price());
+            return $price . sprintf(__('<br/><span class="saved-amount">Save: %s </span>', 'woocommerce' ), $saved);
+        } else {
+            $percentage = round((($product->get_regular_price() - $product->get_sale_price()) / $product->get_regular_price())* 100);
+            return $price . sprintf(__('<br/><span class="saved-amount">Save: %s </span>', 'woocommerce' ), $percentage . "%");
+        }
+    endif;
+    return $price;
+}
+add_filter('woocommerce_get_price_html', 'espaza_display_savings_with_rule', 10, 2);
 
 // Add new footer
 function espaza_new_footer (){
