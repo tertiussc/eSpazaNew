@@ -42,14 +42,75 @@ button.menu-toggle, button.menu-toggle:hover {
     border-color: white;
 }
 
+
  .woocommerce-products-header {
     padding-bottom: 25px !important;
 }
 
-
-a {
-    color: salmon;
+.woocommerce-products-header__title.page-title {
+    display: none;
 }
+
+header.woocommerce-products-header {
+    padding-bottom: 0px !important;
+}
+
+div h1.espaza-welcome {
+    padding-bottom: 0px !important;
+    margin: 0px !important;
+}
+#block-8 {
+    padding-top: 0px ;
+}
+
+/* Styling espaza features */
+.espaza-features {
+    background-color: salmon;
+    padding: 1em 0;
+    margin-bottom: 2em;
+  }
+  .espaza-features .col-full {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .espaza-features .columns-4 {
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .espaza-features .columns-4:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media only screen and (min-width: 480px){
+    .espaza-features .columns-4 {
+      display: flex;
+      width: 33.3%;
+      justify-content: center;
+      text-align: left;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    
+  }
+  #primary {
+    margin-bottom: 0;
+  }
+  
+  .espaza-features i {
+   font-size: 3em;
+   margin-right: 1em;
+   margin-left: 1em;
+   }
+  
+   .espaza-features p {
+     margin: 0;
+     font-size: 1.2em;
+     text-transform: uppercase;
+     font-weight: 700;
+   }
 
 /* info banner */
 .woocommerce-info, .woocommerce-message {
@@ -80,6 +141,66 @@ span.onsale {
 
     /* border: coral 2px solid; */
     font-weight: bold ;
+}
+
+/* Homepage blog entries */
+.homepage-blog-entries {
+    margin-top: 3em;
+  }
+  .homepage-blog-entries ul {
+    list-style: none;
+    margin: 0;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    
+    .homepage-blog-entries ul li {
+      width: 31%;
+      margin-right: 3.5%;
+      float: left;
+    }
+    .homepage-blog-entries ul li:last-child {
+      margin-right: 0;
+    }
+  }
+  .homepage-blog-entries img {
+    margin-bottom: 1em;
+  }
+  .homepage-blog-entries .entry-title,
+  .homepage-blog-entries .entry-link {
+    font-size: 1.4em;
+    /* font-family: 'Lato', sans-serif; */
+    font-weight: 900;
+    text-transform: none;
+  }
+  .entry-link {
+      color: salmon;
+  }
+  .homepage-blog-entries li {
+    margin-bottom: 1.5em;
+  }
+  
+  .homepage-blog-entries .entry-content p {
+    text-align: left;
+  }
+  .homepage-blog-entries .blog-text {
+    margin-bottom: 0.5em;
+  }
+
+  /* Order Details */
+   .order_details {
+      background-color: #292B2C;
+      color: white;
+  }
+  .order_details:before, .order_details:after {
+    background: -webkit-linear-gradient(transparent 0,transparent 0),-webkit-linear-gradient(
+135deg
+,#292B2C 33.33%,transparent 33.33%),-webkit-linear-gradient(
+45deg
+,#292B2C 33.33%,transparent 33.33%);
+}
+tfoot tr th, thead, tbody {
+    color: #292B2C;
 }
 
 /* Footer */
