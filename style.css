@@ -22,3 +22,70 @@ Bootstrap Dark     #292B2C
 body {
     background: url("assets/img/tile.jpg") top left repeat;
 }
+
+#masthead {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+    border-bottom: none !important;
+}
+
+#masthead > div.storefront-primary-navigation {
+    background-color: salmon;
+    margin-top: 100px;
+}
+
+.header-widget-region .widget {
+    padding-bottom: 0px !important;
+}
+
+button.menu-toggle, button.menu-toggle:hover {
+    border-color: white;
+}
+
+ .woocommerce-products-header {
+    padding-bottom: 25px !important;
+}
+
+/* Shop buttons */
+a.button {
+background-color: salmon;
+color: white;
+}
+a.button:hover {
+    background-color: coral;
+}
+
+a {
+    color: salmon;
+}
+
+/* info banner */
+.woocommerce-info {
+    background-color: salmon;
+}
+
+/* Product display */
+ul.products li.product img {
+    transition: all .5s ease;
+}
+ul.products li.product img:hover {
+    /* filter: grayscale(0%); */
+    transform: scale(1.1, 1.1);
+}
+
+/* Hide Breadcrumb */
+.storefront-breadcrumb {
+    display: none;
+}
+
+/* Sale Badge */
+span.onsale {
+    background-color: white;
+    color: coral;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* border: coral 2px solid; */
+    font-weight: bold ;
+}
