@@ -60,7 +60,7 @@ a {
 }
 
 /* info banner */
-.woocommerce-info {
+.woocommerce-info, .woocommerce-message {
     background-color: salmon;
 }
 
