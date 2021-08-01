@@ -38,6 +38,22 @@ function espaza_display_savings_with_rule($price, $product){
 }
 add_filter('woocommerce_get_price_html', 'espaza_display_savings_with_rule', 10, 2);
 
+// Emty cart button
+function espaza_emty_cart_button (){ ?>
+    <a href="?empty-cart=true" class="button">Empty Cart</a>
+
+<?php
+}
+add_action('woocommerce_cart_actions', 'espaza_emty_cart_button');
+// Empty cart function
+function espaza_empty_cart (){
+    if(isset($_GET['empty-cart'])):
+        global $woocommerce;
+        $woocommerce->cart->empty_cart();
+    endif;
+}
+add_action('init', 'espaza_empty_cart');
+
 // Add new footer
 function espaza_new_footer (){
     echo "<div class='reserved'>";
