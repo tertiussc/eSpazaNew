@@ -46,14 +46,6 @@ button.menu-toggle, button.menu-toggle:hover {
     padding-bottom: 25px !important;
 }
 
-/* Shop buttons */
-a.button {
-background-color: salmon;
-color: white;
-}
-a.button:hover {
-    background-color: coral;
-}
 
 a {
     color: salmon;
@@ -88,4 +80,12 @@ span.onsale {
 
     /* border: coral 2px solid; */
     font-weight: bold ;
+}
+
+/* Footer */
+.reserved {
+    text-align: center;
+    background-color: salmon;
+    margin-bottom: 0;
+    padding-bottom: 10px;
 }
