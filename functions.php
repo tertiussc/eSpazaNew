@@ -30,7 +30,7 @@ function espaza_new_footer (){
 
 // Emty cart button
 function espaza_emty_cart_button (){ ?>
-    <a href="?empty-cart=true" class="button">Empty Cart</a>
+<a href="?empty-cart=true" class="button">Empty Cart</a>
 
 <?php
 }
@@ -63,35 +63,35 @@ add_filter('woocommerce_get_price_html', 'espaza_display_savings_with_rule', 10,
 
 // features with icons
 function espaza_features(){ ?>
-    <!-- closing tags temporarily -->
-    </main>
-    </div> <!-- #primary -->
-    </div> <!-- col full -->
- 
-    <!-- My features portion -->
-    <div class="espaza-features">
-        <div class="col-full">
-            <div class="columns-4">
-                <i class="fas fa-shopping-bag"></i>
-                <p>Buy Local</p>
-            </div>
-            <div class="columns-4">
-                <i class="fas fa-award"></i>
-                <p>Trusted Brands</p>
-            </div>
-            <div class="columns-4">
-                <i class="fas fa-user-check"></i>
-                <p>Your People</p>
-            </div>
+<!-- closing tags temporarily -->
+</main>
+</div> <!-- #primary -->
+</div> <!-- col full -->
+
+<!-- My features portion -->
+<div class="espaza-features">
+    <div class="col-full">
+        <div class="columns-4">
+            <i class="fas fa-shopping-bag"></i>
+            <p>Buy Local</p>
+        </div>
+        <div class="columns-4">
+            <i class="fas fa-award"></i>
+            <p>Trusted Brands</p>
+        </div>
+        <div class="columns-4">
+            <i class="fas fa-user-check"></i>
+            <p>Your People</p>
         </div>
     </div>
-    
-    <!-- reopening tags -->
-    <div class="col-full">
-        <div class="content-area">
-            <div class="site-main">
-    
-    <?php
+</div>
+
+<!-- reopening tags -->
+<div class="col-full">
+    <div class="content-area">
+        <div class="site-main">
+
+            <?php
     }
     add_action('woocommerce_before_shop_loop', 'espaza_features', 5);
 
@@ -107,29 +107,29 @@ function espaza_homepage_posts (){
     );
     $entries = new WP_Query($args);
 ?>
-<div class="homepage-blog-entries">
-    <h2 class="section-title">Latest Blog Entries</h2>
-    <ul>
-        <?php while($entries -> have_posts()): $entries->the_post(); ?>
-        <li>
-            <?php The_post_thumbnail('blog_entry'); ?>
-            <h2 class="entry-title"><?php the_title(); ?></h2>
-            <div class="entry-content">
-                <header class="entry-header">
-                    <p>By: <?php the_author(); ?> | <?php the_time(get_option('date_format')); ?> </p>
-                </header>
-                <?php
+            <div class="homepage-blog-entries">
+                <h2 class="section-title">Latest Blog Entries</h2>
+                <ul>
+                    <?php while($entries -> have_posts()): $entries->the_post(); ?>
+                    <li>
+                        <?php The_post_thumbnail('blog_entry'); ?>
+                        <h2 class="entry-title"><?php the_title(); ?></h2>
+                        <div class="entry-content">
+                            <header class="entry-header">
+                                <p>By: <?php the_author(); ?> | <?php the_time(get_option('date_format')); ?> </p>
+                            </header>
+                            <?php
                     $content = wp_trim_words(get_the_excerpt(), 20);
                     echo "<p class='blog-text'>" . $content . "</p>";
                 ?>
-                <a href="<?php the_permalink(); ?>" class="entry-link">Read more &raquo</a>
+                            <a href="<?php the_permalink(); ?>" class="entry-link">Read more &raquo</a>
+                        </div>
+                    </li>
+                    <?php endwhile; wp_reset_postdata(); ?>
+                </ul>
             </div>
-        </li>
-        <?php endwhile; wp_reset_postdata(); ?>
-    </ul>
-</div>
 
-<?php  
+            <?php  
 endif;
 } 
 add_action('woocommerce_after_main_content', 'espaza_homepage_posts', 8);
